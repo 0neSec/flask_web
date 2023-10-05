@@ -1,0 +1,8 @@
+{% extends "app/main_layout.html" %}
+
+{% block app %}
+<h1> Halaman About</h1>
+<a href={{ url_for("hello_world") }}>klik</a>
+<img src={{ url_for('static', filename='Untitled.jpeg') }} alt="Deskripsi Gambar">
+
+{% endblock %}

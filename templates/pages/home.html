@@ -1,0 +1,44 @@
+{% extends "app/main_layout.html" %}
+{% block app %}
+
+<h1> My First Try Using Flask </h1>
+<p> Flask is Fun wd </p>
+<p>{{ value }}</p>
+
+
+
+    <h1> looping as</h1>
+    <ul>
+      {% for data in namaHari %}
+      <li>{{ data }}</li>
+      {% endfor %}
+    </ul>
+    
+    <h1>CONDITIONING if else</h1>
+    {% if suasana == "senang" %}
+    <p>dia juga cinta</p>
+    {% elif suasana == "sedih" %}
+    <p>dia juga sedih</p>
+    {% else %}
+    <p>dia sedih</p>
+    {% endif %}
+
+    <h1>set Variabe </h1>
+    {% set hari = "jumaat" %}
+    <p>{{ hari }}</p>
+    
+
+    <h1>colab CONDITIONING dan for</h1>
+    <ul>
+      {% for data in namaHari %}
+      {% if data ==hari %}
+      <p>saya senang</p>
+      {% else %}
+      <p>saya tidak senang</p>
+      {% endif %}
+      {% endfor %}
+    </ul>
+
+  </body>
+</html>
+{% endblock %}
